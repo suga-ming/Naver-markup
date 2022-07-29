@@ -390,6 +390,60 @@ textarea::-webkit-outer-spin-button {
   line-height: 46px;
 }
 
+.recent-order-area {
+  display: flex;
+  margin-top: 16px;
+  padding: 18px 0;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.recent-order-area .recent-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-right: 1px solid #f2f2f2;
+  line-height: 1.42;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+}
+
+.recent-order-area .recent-title .ico-clock {
+  margin-bottom: 4px;
+  width: 14px;
+}
+
+.recent-order-area .recent-menu-list {
+  display: flex;
+}
+
+.recent-order-area .recent-menu-item {
+  box-sizing: content-box;
+  padding-left: 16px;
+  width: 80px;
+  text-align: center;
+}
+
+.recent-order-area .recent-menu-item.is-ordered {
+  padding-right: 16px;
+  border-right: 1px solid #f2f2f2;
+}
+
+.recent-order-area .recent-menu-item:last-child {
+  padding-right: 18px;
+}
+
+.recent-order-area .menu-img-area {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #f9f9f9;
+  border-radius: 100%;
+}
+
 .container {
   padding-top: 94px;
 }
