@@ -861,9 +861,28 @@ body.scroll-off {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 0;
   overflow: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.option-popup-area.show {
+  height: 100%;
   z-index: 5000;
+}
+
+.option-popup-area.show .dimmed-layer {
+  opacity: 1;
+}
+
+.option-popup-area.show .menu-option-popup {
+  transform: translateY(0);
+}
+
+.option-popup-area .dimmed-layer {
+  position: absolute;
+  opacity: 0;
 }
 
 .option-popup-area .menu-option-popup {
@@ -875,6 +894,8 @@ body.scroll-off {
   max-height: calc(100% - 45px);
   background-color: #f4f7f9;
   z-index: 10000;
+  transform: translateY(110%);
+  transition: transform 0.3s ease;
 }
 
 .option-popup-area .content-top-pattern {
@@ -883,6 +904,7 @@ body.scroll-off {
   width: 100%;
   height: 11px;
   fill: white;
+  z-index: 2;
 }
 
 .option-popup-area .content-top {
@@ -1226,30 +1248,31 @@ body.scroll-off {
   z-index: 10000;
 }
 
-.order-type-popup .title {
+.order-type-popup .title1 {
   font-size: 20px;
   font-weight: 700;
   color: #000;
 }
 
-.type-list {
+.order-type-popup .type-list {
   display: flex;
   margin-top: 32px;
 }
 
-.type-item {
+.order-type-popup .type-item {
   flex: 1;
 }
 
-.type-item + .type-item {
+.order-type-popup .type-item + .type-item {
   border-left: 1px solid #898e98;
 }
 
-.icon {
+.order-type-popup .type-item .icon {
+  width: 100px;
   height: auto;
 }
 
-.desc {
+.order-type-popup .desc {
   margin-top: 8px;
   font-size: 15px;
   line-height: 1.5;
@@ -1257,7 +1280,7 @@ body.scroll-off {
   color: #000;
 }
 
-.btn-selection {
+.order-type-popup .btn-selection {
   display: inline-block;
   margin-top: 10px;
   padding: 6px 18px;
@@ -1451,6 +1474,12 @@ body.scroll-off {
   font-weight: 700;
   color: #333;
   letter-spacing: -0.3px;
+}
+
+.menu-list-area .btn-toggle {
+  display: flex;
+  margin: -16px;
+  padding: 16px;
 }
 
 .menu-list-area .period {
@@ -2126,6 +2155,12 @@ body.scroll-off {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.dimmed-layer.hidden {
+  opacity: 0;
 }
 
 .dimmed-layer.light {
