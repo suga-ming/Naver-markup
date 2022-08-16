@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>네이버주문 마크업</title>
+    <title>제로베이스 마크업</title>
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
@@ -22,7 +22,7 @@
             />
           </button>
         </div>
-        <!-- //주문서 타이틀 -->
+        <!-- // 주문서 타이틀 -->
 
         <!-- 주문서 메뉴 -->
         <div class="order-content">
@@ -58,15 +58,15 @@
                 />
                 <p class="txt">담은 메뉴가 없습니다.</p>
               </div>
-              <!-- //담은 메뉴 없음 -->
+              <!-- // 담은 메뉴 없음 -->
 
               <!-- 담은 메뉴 있음 -->
               <ul class="menu-list">
                 <li class="menu-item">
                   <div class="menu-img-area">
                     <img
-                      src="https://via.placeholder.com/74/ffffff/000000"
-                      alt="메뉴명"
+                      src="https://via.placeholder.com/74/ffffff/0000000"
+                      alt="{메뉴명}"
                       class="menu-img"
                       width="74"
                       height="74"
@@ -75,11 +75,6 @@
                   <div class="menu-info-area">
                     <p class="menu-name-group">
                       <span class="menu-name">메뉴이름</span>
-                      <img
-                        src="../assets/images/ico-new.svg"
-                        alt="new"
-                        class="ico-new"
-                      />
                     </p>
                     <p class="menu-desc">
                       메뉴에 대한 간단한 설명이 적혀있습니다 메뉴에 대한 간단한
@@ -90,8 +85,7 @@
                       <div class="amount-select">
                         <button
                           class="btn-minus enabled"
-                          aria-label="빼기"
-                          disabled
+                          aira-label="빼기"
                         ></button>
                         <span class="amount">2</span>
                         <button
@@ -99,13 +93,13 @@
                           aria-label="더하기"
                         ></button>
                       </div>
-                      <p class="menu-price">9,999원</p>
+                      <p class="menu-price">19,998원</p>
                     </div>
                   </div>
                   <button class="btn-delete">
                     <img
                       src="../assets/images/ico-close.svg"
-                      alt=""
+                      alt="삭제"
                       class="ico-delete"
                     />
                   </button>
@@ -113,8 +107,8 @@
                 <li class="menu-item">
                   <div class="menu-img-area">
                     <img
-                      src="https://via.placeholder.com/74/ffffff/000000"
-                      alt="메뉴명"
+                      src="https://via.placeholder.com/74/ffffff/0000000"
+                      alt="{메뉴명}"
                       class="menu-img"
                       width="74"
                       height="74"
@@ -123,11 +117,6 @@
                   <div class="menu-info-area">
                     <p class="menu-name-group">
                       <span class="menu-name">메뉴이름</span>
-                      <img
-                        src="../assets/images/ico-new.svg"
-                        alt="new"
-                        class="ico-new"
-                      />
                     </p>
                     <p class="menu-desc">
                       메뉴에 대한 간단한 설명이 적혀있습니다 메뉴에 대한 간단한
@@ -138,7 +127,8 @@
                       <div class="amount-select">
                         <button
                           class="btn-minus disabled"
-                          aria-label="빼기"
+                          aira-label="빼기"
+                          onClick="modalOpen()"
                         ></button>
                         <span class="amount">1</span>
                         <button class="btn-plus" aria-label="더하기"></button>
@@ -149,82 +139,86 @@
                   <button class="btn-delete">
                     <img
                       src="../assets/images/ico-close.svg"
-                      alt=""
+                      alt="삭제"
                       class="ico-delete"
                     />
                   </button>
                 </li>
               </ul>
+
               <div class="order-total">
                 <span class="total-txt">총 주문금액</span>
-                <span class="total-price">19,998원</span>
+                <span class="total-price">29,997원</span>
               </div>
-              <!-- //담은 메뉴 있음 -->
+              <!-- // 담은 메뉴 있음 -->
             </div>
           </div>
-          <a href="#" class="btn-menu-add"> <i class="ico-add"></i>메뉴추가 </a>
-        </div>
-        <!-- //주문서 메뉴 -->
 
-        <!--주문자 정보-->
+          <a href="#" class="btn-menu-add"><i class="ico-add"></i>메뉴추가</a>
+        </div>
+        <!-- // 주문서 메뉴 -->
+
+        <!-- 주문자 정보 -->
         <div class="order-content-extra">
           <div class="common-inner">
             <div class="orderer-info-area">
               <p class="title">주문자 정보</p>
-              <li class="info-item">
-                <p class="info-title">일회용 수저, 포크</p>
-                <div class="option-group">
-                  <div class="option-item">
-                    <input
-                      type="radio"
-                      id="need"
-                      class="input-radio"
-                      name="disposables"
-                      checked
-                    />
-                    <label for="need" class="input-radio-button need"
-                      >필요해요</label
-                    >
+              <ul class="info-list">
+                <li class="info-item">
+                  <p class="info-title">일회용 수저, 포크</p>
+                  <div class="option-group">
+                    <div class="option-item">
+                      <input
+                        type="radio"
+                        id="need"
+                        class="input-radio"
+                        name="disposables"
+                        checked
+                      />
+                      <label for="need" class="input-radio-button need"
+                        >필요해요</label
+                      >
+                    </div>
+                    <div class="option-item">
+                      <input
+                        type="radio"
+                        id="no-need"
+                        class="input-radio"
+                        name="disposables"
+                      />
+                      <label for="no-need" class="input-radio-button no-need"
+                        >필요 없어요</label
+                      >
+                    </div>
                   </div>
-                  <div class="option-item">
-                    <input
-                      type="radio"
-                      id="no-need"
-                      class="input-radio"
-                      name="disposables"
-                      checked
-                    />
-                    <label for="no-need" class="input-radio-button no-need"
-                      >필요 없어요</label
-                    >
-                  </div>
-                </div>
-              </li>
-              <li class="info-item">
-                <p class="info-title">요청사항</p>
-                <input
-                  type="text"
-                  placeholder="(선택) 요청사항을 입력해 주세요."
-                  class="input-text"
-                />
-              </li>
-              <li class="info-item">
-                <p class="info-title">
-                  주문자 연락처<span class="fw700 color-point">(필수)</span>
-                </p>
-                <input
-                  type="text"
-                  placeholder="연락처를 입력해 주세요."
-                  class="input-text"
-                  required
-                />
-              </li>
+                </li>
+                <li class="info-item">
+                  <p class="info-title">요청사항</p>
+                  <input
+                    type="text"
+                    placeholder="(선택) 요청사항을 입력해 주세요."
+                    class="input-text"
+                  />
+                </li>
+                <li class="info-item">
+                  <p class="info-title">
+                    주문자 연락처<span class="fw700 color-point">(필수)</span>
+                  </p>
+                  <input
+                    type="text"
+                    placeholder="연락처를 입력해 주세요."
+                    class="input-text"
+                    required
+                  />
+                </li>
+              </ul>
             </div>
+
             <div class="place-map-area">
               <p class="title">주문 매장 위치</p>
               <div class="map-area">
                 <div class="place-address-box">
-                  <p class="place-name">샐러드 네이버점</p>
+                  <p class="place-name">샐러드 제로베이스점</p>
                   <p class="place-address">서울시 강남구 역삼동 123-4</p>
                   <p class="place-address-detail">
                     역삼역 8번 출구로 나와서 직진 410m
@@ -306,8 +300,7 @@
             </div>
           </div>
         </div>
-
-        <!--//주문자 정보-->
+        <!-- // 주문자 정보 -->
 
         <!-- 주문하기 버튼 -->
         <div class="btn-order-area">
@@ -330,12 +323,13 @@
         </div>
         <!-- // 맨위로 -->
       </div>
+
       <!-- 모달 -->
-      <div class="modal-wrapper">
+      <div class="modal-wrapper hidden">
         <div class="dimmed-layer light"></div>
         <div class="modal-container">
           <div class="modal-content">
-            <button class="btn-close">
+            <button class="btn-close" onClick="modalClose()">
               <svg
                 width="16"
                 height="16"
@@ -363,12 +357,34 @@
             <p class="modal-desc">모달에 관련된 설명글이 적힙니다.</p>
           </div>
           <div class="btn-area">
-            <button class="btn-cancel">취소</button>
-            <button class="btn-confirm">확인</button>
+            <button class="btn-cancel" onClick="modalClose()">취소</button>
+            <button class="btn-confirm" onClick="modalClose()">확인</button>
           </div>
         </div>
       </div>
       <!-- // 모달 -->
     </div>
+
+    <script>
+      // 메뉴 리스트 토글
+      const btnToggle = document.querySelectorAll(".btn-toggle");
+      const toggleMenuList = (e) => {
+        e.currentTarget.closest(".agreement-item").classList.toggle("is-open");
+      };
+
+      btnToggle.forEach(function (e) {
+        e.addEventListener("click", toggleMenuList);
+      });
+
+      // 모달
+      const modalOpen = () => {
+        document.querySelector("body").classList.add("scroll-off");
+        document.querySelector(".modal-wrapper").classList.remove("hidden");
+      };
+      const modalClose = () => {
+        document.querySelector("body").classList.remove("scroll-off");
+        document.querySelector(".modal-wrapper").classList.add("hidden");
+      };
+    </script>
   </body>
 </html>
